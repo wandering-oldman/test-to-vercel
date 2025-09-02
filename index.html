@@ -1,41 +1,805 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir='ltr' lang='en'>
 <head>
-<title>Mono Plus</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
-<script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
-</script>
-<div id="player"></div>
-<script>
-    var playerInstance = jwplayer("player");
+<title> k-series-inter-1 </title>
+<meta charset='UTF-8' />
 
-    playerInstance.setup({
 
-        playlist: [{
-"image": "https://www.dropbox.com/scl/fi/563mscujyrmynb03qvwtp/wandering-oldman-logo.png?rlkey=a6v56e1rgt96luwlzqe2ofbfi&dl=1",
-"sources": [
-{
-"default": true,
-"type": "hls",
-"file": 'https://live.x2.co.th/live/13livetv-th.m3u8',
-"label": "1"
+<link href="https://playtvthai.github.io/m3u8/css/bootstrap.css" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://playtvthai.github.io/m3u8/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://playtvthai.github.io/m3u8/css/normalize.css">
+<link rel="stylesheet" href="https://playtvthai.github.io/m3u8/css/custom.css">
+
+	
+<!-- Styles of Puerto Responsive Flat Buttons -->
+<link rel="stylesheet" href="https://playtvthai.github.io/m3u8/css/main.css">
+	
+<!-- Font awesome -->
+<link rel="stylesheet" href="http://hdtvdd.com/work/assets_remark/fonts/font-awesome/font-awesome.min.css">
+
+<!-- start plugins -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://playtvthai.github.io/m3u8/js/jquery-1.11.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,400,500,600,700,800,900" rel='stylesheet' type='text/css'>
+
+<script src="https://playtvthai.github.io/m3u8/js/jquery.backstretch.js"></script>
+<script src="http://hdtvdd.com/work/bootstrap-login-forms/form-2/assets/js/scripts.js"></script>
+<style type="text/css">
+
+.overlay {
+    z-index: 5;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    position:absolute;
+    text-align:left;
+	background-color:rgba(255,255,255,0);
 }
-]
-}],
-logo: { file: "https://dl.dropbox.com/scl/fi/uydidwzleznktuq5btwwe/logo-4.jpg?rlkey=nvqxtzx2vc2dwoc5phvm02y7y&dl=0", position: 'bottom-right' },
- width: "100%",
-        height: "100%",
-        aspectratio: "16:9",
-        mute: false,
-        autostart: true,
-        cast: {},
-    });
-    if (getLang == "") {
-   lang = 1;
+
+.overlay-flag {
+    position:absolute;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align:right;
+	background-color:rgba(255,255,255,0);
+
+}
+
+
+.overlay2 {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    position:absolute;
+    text-align:left;
+	background-color:rgba(0,0,0,0.5);
+	height:60px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:5px;
+	width:100%;
+	margin-left:0px;
+	margin-top:35px;
+}
+.login_botton {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 2px;
+    cursor: pointer;
+	border-radius: 4px;
+}
+
+.live_botton {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 2px;
+    cursor: pointer;
+	border-radius: 4px;
+}
+
+.login_txt {
+	border: #0A0A0A;
+	color: black;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 4px;
+	width:150px;
+    margin-top: -6px;
+
+}
+
+input:focus {
+	outline: none !important;
+	border-color: #F7AA06;
+	box-shadow: 0 0 0 5px #F7AA06;
+	border-radius: 2px
+}
+
+button:focus {
+	outline: none !important;
+	border-color: #F7AA06;
+	box-shadow: 0 0 0 5px #F7AA06;
+	border-radius: 2px;
+}
+
+a:focus img{
+	outline: none !important;
+	box-shadow: 0 0 0 5px #F7AA06;
+	border-radius: 2px;
+
+}
+
+.box-flag {
+	border: 0px;
+	background-color: rgba(255,255,255,0.0);
+	display: inline-block;
+}
+
+
+
+</style>
+<link rel="stylesheet" href="http://hdtvdd.com/work/font/stylesheet.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="http://hdtvdd.com/work/css/8k.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="http://hdtvdd.com/work/css/overlay.css" type="text/css" charset="utf-8">
+<link href="http://hdtvdd.com/work/css/theme.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+  <style>
+  .modal-header {
+    background-color: #111;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
   }
-  jwplayer().on('play', function(e) {
-    jwplayer().setCurrentAudioTrack(lang);
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
+  
+.group {
+  margin-bottom: 30px;
+}
+.group label {
+  font-size: 24px;
+}
+.group2 label {
+  font-size: 20px;
+}
+  
+  input[type='text'] { font-size: 24px; }
+  
+  </style>
+
+
+
+
+</div>
+ 
+<script>
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
   });
+});
+
+$(document).ready(function(){
+  $("#myBtn2").click(function(){
+    $("#myModal2").modal();
+  });
+});
+
+$(document).ready(function(){
+  $("#myBtn_vip").click(function(){
+    $("#myModal_vip").modal();
+  });
+});
+
+$(document).ready(function(){
+  $("#myBtn_cpass").click(function(){
+    $("#myModal_changepass").modal();
+  });
+});
 </script>
+
+<style type="text/css">
+.footer 
+{
+    text-align: center;
+    position : absolute;
+    bottom : -20;
+    width:99%;
+    height : 56px;
+    margin-top : 50px;
+  }
+</style>
+</header>
+	
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>       
+
+
+										
+  <div class="container" style="background-color:rgba(0,0,0,0.0); height:100%;">
+     <div class="container_wrap">
+     	<div class="row" style="background-color:#27282c;border-radius:5px">
+        	<div class="col-lg-12 col-md-12 col-xs-12" style="margin-top:10px;margin-bottom:10px;">
+            	<div class="row" >
+			<div class="col-lg-2 col-md-2 col-sm-5 col-xs-5">
+				<div class="logo">
+				</div>
+			</div>
+
+
+		<div class="col-lg-10 col-md-12 col-xs-12">
+		<div class="col-lg-12 col-md-12 col-xs-12" align="left" style="padding-top:0px;padding-bottom:5px;padding-left:5px;padding-right:5px">
+            <form class="form-inline">
+                <div class="form-group" style="margin:5px;">
+
+                
+					<form action="" method="get" name="lange">
+						<input name="lange" type="hidden" id="lange" value="en">
+						<input type="image" src="/web/images/en.gif" name="submit" width="30" height="2%" alt="submit"/>
+					</form>	
+
+
+	<!--div class="form-group"-->
+	<label for="form-password"><font color='white'>ชื่อ :  </font><font color='yellow'>[ ผู้เฒ่าพเนจร ™ ]</font></label>
+	<!--/div-->
+
+										
+    <button class="btn btn-default" type="button" style="background-color:transparent;border-radius:2px;border:0px;font-size:18px;color:#FFF;padding-left:5px;padding-right:5px;font-family: 'rsuregular';" onclick="window.location.href='go:digital'"></i> 🏠 Home ™ </button>
+                   
+	<button class="btn btn-default" type="button" style="background-color:transparent;border-radius:2px;border:0px;font-size:18px;color:#FFF;padding-left:5px;padding-right:5px;font-family: 'rsuregular';" onclick="window.location.href='go:live'"></i> 📡 ถ่ายทอดสด ™</button>
+	
+	<button class="btn btn-default" type="button" style="background-color:transparent;border-radius:2px;border:0px;font-size:18px;color:#FFF;padding-left:5px;padding-right:5px;font-family: 'rsuregular';" onclick="window.location.href='go:main-serie'"></i> 🎞️ ดูซีรี่ย์ ™ </button>
+					
+	<button class="btn btn-default" type="button" style="background-color:transparent;border-radius:2px;border:0px;font-size:18px;color:#FFF;padding-left:5px;padding-right:5px;font-family: 'rsuregular';" onclick="window.location.href='go:main-movie'"></i>🎥 ดูหนัง ™  </button>					
+					
+	<button class="btn btn-default" type="button" style="background-color:transparent;border-radius:2px;border:0px;font-size:18px;color:#FFF;padding-left:5px;padding-right:5px;font-family: 'rsuregular';" onclick="window.location.href='go:main-movie'"></i>📽️ ดูสารคดี ™ </button>					
+					
+	<button class="btn btn-default" type="button" style="background-color:transparent;border-radius:2px;border:0px;font-size:18px;color:#FFF;padding-left:5px;padding-right:5px;font-family: 'rsuregular';" onclick="window.location.href='http://action_exit'"></i>🚪 ออก</button>					
+
+
+
+------------------------------------------------------------------------------------------
+
+
+        <div class="col-lg-9 col-md-9 col-xs-9" style="width:135%;padding-left:0px;padding-right:0px;">
+        <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Waterfront-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/72f4a745-942b-41da-abb5-8993cda62473/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">น่านน้ำสีเทา EP1 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Waterfront-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/9d080cca-fa47-4778-9c36-02f309a669f4/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">น่านน้ำสีเทา EP2 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Waterfront-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/05f5f36d-0443-4ad3-ae42-01545afba0fd/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">น่านน้ำสีเทา EP3 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Waterfront-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/c841193e-3ea5-43e3-b30a-9f9f966cba15/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">น่านน้ำสีเทา EP4 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Waterfront-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/42425940-d3ac-44aa-a0f1-739585c1eb52/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">น่านน้ำสีเทา EP5 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Waterfront-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/604ef6e9-e57f-4f46-a4fb-c0fb2eda0942/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">น่านน้ำสีเทา EP6 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Waterfront-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/6a1a7405-f48b-4264-af37-71979f06e327/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">น่านน้ำสีเทา EP7 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Waterfront-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/1d0f1d67-d721-41c2-879b-3feb8a11d3a0/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">น่านน้ำสีเทา EP8 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Adolescence-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/3c021e8c-b333-4c14-aff0-41b8801ec0a4/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">วัยลน คนอันตราย EP1 (SUB)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Adolescence-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/4c200005-c0be-4fec-b51e-0c182320713a/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">วัยลน คนอันตราย EP2 (SUB)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Adolescence-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/3cc267ac-8754-40c8-9ae7-47aa1c1e50ec/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">วัยลน คนอันตราย EP3 (SUB)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Adolescence-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/a89ec8b1-f234-48c1-b254-7ede14f75574/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">วัยลน คนอันตราย EP4 (SUB)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Olympo-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/2f680010-63bd-48ea-a378-2e883ed2d1a7/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">OlympoEP1 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Olympo-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/2d6f3ea5-0e2c-4298-a322-6fff89b96dc8/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">OlympoEP2 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Olympo-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/eae847ba-3921-45d8-890a-be56013cc1b1/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">OlympoEP3 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Olympo-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/70704437-b6e1-4639-a278-b9eaa20c2f1c/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">OlympoEP4 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Olympo-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/4a80227c-bc49-4fee-b230-1ed75be82146/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">OlympoEP5 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Olympo-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/572b78bb-1a75-424e-96ad-16bb59371592/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">OlympoEP6 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Olympo-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/317506f3-2f9a-4957-9d1b-4958e0d7f4fc/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">OlympoEP7 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Olympo-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/fcc1b221-3af0-4e8b-ba62-ed6649801b29/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">OlympoEP8 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/76ca69cb-d9e2-40f5-9a93-fd42a590caa8/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP1 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/a430697c-b6a7-4916-986e-9f140a35cd63/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP2 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/e0c02e31-aa58-4170-a72a-69b54a5ec823/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP3 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/7e1051cb-a18b-4d2a-9680-0274cbe94694/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP4 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/50193980-3920-43c3-9522-ea752d91d9b3/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP5 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/83a977eb-63b4-415a-b514-5ee6c3f09f88/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP6 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/6ca8bdf9-006c-4717-810b-8660aea2d22d/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP7 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/8c9360f3-06ac-4dc0-95eb-5d224c992c41/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP8 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/33c94b58-2da9-4f15-8ed0-aa001441d9a9/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP9 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/73bdd0ec-5ac2-4c33-89b2-37516492aeda/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP10 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-2022.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/786ec5f4-b887-49b5-b396-6bc2709ed669/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะแซนด์แมน Season 1 EP11 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-Season-2-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/40aceb1a-0c2b-4e3e-9f3c-e6f3c46ab108/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะ แซนด์แมน ซีซั่น 2 EP1 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-Season-2-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/112dced1-9d9c-45ed-a2dd-6dcbf3f0bba6/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะ แซนด์แมน ซีซั่น 2 EP2 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-Season-2-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/8d4a7a97-5be0-425f-afa8-8b3c4e6eb137/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะ แซนด์แมน ซีซั่น 2 EP3 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-Season-2-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/4b65fe62-7a64-4833-a059-e28cf38d8e64/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะ แซนด์แมน ซีซั่น 2 EP4 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-Season-2-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/cd82f21c-5586-4a58-b874-489f9e39b037/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะ แซนด์แมน ซีซั่น 2 EP5 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/The-Sandman-Season-2-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/65ee3fdb-b590-41e9-9faa-f5c6ab11dea6/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เดอะ แซนด์แมน ซีซั่น 2 EP6 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Countdown-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/067704ae-96c9-411b-9b03-f29b4df3c91e/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">ขีดเส้นตายสู่หายนะ EP1 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Countdown-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/e8c9bd3c-0d03-4f92-bea6-251fdc759e30/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">ขีดเส้นตายสู่หายนะ EP2 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Countdown-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/9e737cd8-b731-49f1-8a5b-b2d6312c4ecd/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">ขีดเส้นตายสู่หายนะ EP3 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Ironheart-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/bc38da7f-f84a-4ae2-8673-7529c1af7069/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">Ironheart  EP1 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Ironheart-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/c745bd08-700b-4b15-b333-bb09035b9ade/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">Ironheart  EP2 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Ironheart-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/71c90fda-99a5-4193-9cb4-15d660753a5a/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">Ironheart  EP3 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Ironheart-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/2ac5a74c-59d3-4c67-8def-2b40d62ff580/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">Ironheart  EP4 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Ironheart-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/2e8d0106-dd39-4e4f-bfd8-22115a17c661/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">Ironheart  EP5 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/07/Ironheart-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/ad4dd163-74c5-4715-be9c-bd5687fcb8cf/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">Ironheart  EP6 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/06/Sirens-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/46dfbc2b-d0de-4dc6-af36-1459ba154286/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เล่ห์เสน่ห์ร้ายEP1 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/06/Sirens-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/4e779cdf-1542-478f-90e1-b5882a8136e8/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เล่ห์เสน่ห์ร้ายEP2 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/06/Sirens-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/063c2c5a-d567-4f19-9db3-701b408ee84b/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เล่ห์เสน่ห์ร้ายEP3 (TH)</p></center>
+            </div>
+            
+            <div class="col-md-2 col-sm-2 col-xs-2 m-col-md-2" style="width:20%;height:300px;padding:10px">
+                <div class="movie-box">
+                    <div class="movie-image">
+                        <button class="btn btn-default btn-block btn-lg" type="button" style="background-size:cover;background-image:url(https://kserietv.co/wp-content/uploads/2025/06/Sirens-2025.webp);width:175px;height:255.45px;background-position: center center;" onclick="window.location.href='https://playcdn.kserietv.com/880115eb-c62f-41f4-81a0-ff3507701813/_'" autofocus="">
+                        </button>
+                    </div>
+                </div>
+                <center><p style="color:white">เล่ห์เสน่ห์ร้ายEP4 (TH)</p></center>
+            </div>
+ 
+     
+           
+		
+
+<div class="col-lg-12 col-md-12 col-xs-12">
+	<div class="example" align="center">
+		<nav>
+			<ul class="pagination">
+				<li><a href="go:main-fw" aria-label="กลับหน้าแรก"><span aria-hidden="true"><< กลับหน้าหลัก</span></a></li>		
+						<li class="active"><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (1).html'><b>1</b></a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (2).html'>2</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (3).html'>3</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (4).html'>4</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (5).html'>5</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (6).html'>6</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (7).html'>7</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (8).html'>8</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (9).html'>9</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (10).html'>10</a></li>>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (11).html'>11»</a></li>
+										<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (2).html'>หน้าต่อไป»</a></li>
+						<li><a href='https://udzaa2238.github.io/k-series-inter/k-series-inter (50).html'>  หน้าสุดท้าย» </a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+
+
+</div>
+</div>
+</div>  
+</div> 
+</div>
+</div>
+</div>
